@@ -1,15 +1,89 @@
+h1 {
+    font-size: 2.8rem;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.info {
+    padding: 40px 0 0;
+}
+
+.nav-icon {
+    margin-top: -3px;
+    background-size: cover;
+    width: 20px;
+    display: inline-block;
+    border-radius: 4px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.nav-icon--tile {
+    background-image: url('./img/nav/tile.png'); 
+}
+
+.nav-icon--wood {
+    background-image: url('./img/nav/wood.png'); 
+}
+
+.nav-icon--insulation {
+    background-image: url('./img/nav/insulation.png'); 
+}
+
+.nav-icon--zinguerie {
+    background-image: url('./img/nav/zinguerie.png'); 
+}
+
 .page-header {
-    min-height: 620px;
-    background-size: 300%;
-    background-position: 40% 15%;
+    height: 80vh;
+    min-height: 560px;
+    background-image: url('./img/bg.jpg');
+    background-color: #607D8B;
+}
+
+.page-header_description {
+    padding: 1.4rem 0 1rem;
+}
+
+.page-header_description a {
+    color: inherit;
+    font-weight: 600;
+}
+
+.page-header_description p {
+    font-size: 1rem;
+}
+
+.section--tile .icon img {
+    width: 200px;
 }
 
 footer .copyright {
-    font-size: 14px;
+    font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.8rem;
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 768px) {
+
+    h1 {
+        font-size: 3.3125rem;
+    }
+
     .page-header {
-        background-size: 200%;
+        background-size: 138%;
+        background-position: 4% 48%;
+    }
+
+    .page-header_description p {
+        font-size: 1.2rem;
     }
 }
