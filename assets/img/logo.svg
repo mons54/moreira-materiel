@@ -1,3 +1,1 @@
-<svg width="400" height="110">
-  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-</svg>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 80"><defs><style>.cls-1{fill:#239e48;}.cls-2{fill:#be202a;}.cls-3{fill:#fff;}</style></defs><title>MOREIRA MATERIEL</title><polyline class="cls-1" points="0 80 0 0 44 0 44 80 0 80"/><polygon class="cls-2" points="132 0 44 0 44 79.72 132 80 132 0"/><polygon class="cls-3" points="73 24 14 80 132 80 73 24"/><rect class="cls-3" x="14" y="40" width="30" height="40"/><polygon points="39 46 19 46 19 79.93 39 80 39 46"/><polygon points="73 33 24 80 122 80 73 33"/><polygon class="cls-3" points="73 56 49 80 97 80 73 56"/></svg>
