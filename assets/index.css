@@ -1,0 +1,15 @@
+.page-header {
+    min-height: 620px;
+    background-size: 300%;
+    background-position: 40% 15%;
+}
+
+footer .copyright {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        background-size: 200%;
+    }
+}
