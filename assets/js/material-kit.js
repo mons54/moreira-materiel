@@ -88,12 +88,6 @@ $(document).ready(function() {
 
     $('.bootstrap-tagsinput').addClass('' + tagClass + '-badge');
 
-    if ($('.navbar-color-on-scroll').length != 0) {
-        $(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
-    }
-
-    materialKit.checkScrollForTransparentNavbar();
-
     if (window_width >= 768) {
         big_image = $('.page-header[data-parallax="true"]');
         if (big_image.length != 0) {
@@ -121,7 +115,7 @@ $(document).on('click', '.card-rotate .btn-rotate', function() {
     }
 });
 
-$(document).on('click', '.navbar-toggler', function() {
+$(document).on('click', '.navbar-toggler, .nav-link', function() {
     $toggle = $(this);
 
     if (materialKit.misc.navbar_menu_visible == 1) {

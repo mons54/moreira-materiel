@@ -1,13 +1,27 @@
-h1 {
-    font-size: 2.8rem;
-}
-
 .section {
     padding: 40px 0;
 }
 
 .info {
     padding: 40px 0 0;
+}
+
+.navbar .navbar-brand {
+    margin-right: 0;
+    font-size: 1.5rem;
+   text-transform: uppercase;
+}
+
+.navbar .navbar-brand strong {
+    font-weight: 800;
+}
+
+.navbar .navbar-brand .logo {
+    display: inline-block;
+    background-image: url(./img/logo.svg);
+    width: 34px;
+    height: 20px;
+    margin-right: 0.4rem;
 }
 
 .nav-icon {
@@ -44,17 +58,22 @@ h1 {
     background-color: #607D8B;
 }
 
+.page-header .title {
+    font-size: 2.4rem;
+}
+
 .page-header_description {
     padding: 1.4rem 0 1rem;
 }
 
 .page-header_description a {
     color: inherit;
-    font-weight: 600;
 }
 
 .page-header_description p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: justify;
 }
 
 .section--tile .icon img {
@@ -65,10 +84,10 @@ footer .copyright {
     font-size: 1rem;
 }
 
-@media (min-width: 992px) {
-    .navbar .navbar-nav .nav-item .nav-link {
-        padding: 0.8rem;
-        font-size: 14px;
+/** iphone4 **/
+@media (max-width: 330px) {
+    .navbar .navbar-brand {
+        font-size: 1.4rem;
     }
 }
 
@@ -80,10 +99,54 @@ footer .copyright {
 
     .page-header {
         background-size: 138%;
-        background-position: 4% 48%;
+        background-position: 4% 40%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .navbar .navbar-brand {
+        display: flex;
+        vertical-align: middle;
+        font-size: 1.4rem;
+        margin-right: 0.4rem;
     }
 
-    .page-header_description p {
-        font-size: 1.2rem;
+    .navbar .navbar-brand strong {
+        margin-right: 0.4rem;
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .navbar .navbar-brand .logo {
+        display: inline-block;
+        background-image: url(./img/logo.svg);
+        width: 40px;
+        height: 24px;
+        margin-right: 0.8rem;
+    }
+
+    .nav-icon--mobile,
+    .nav-text--mobile {
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    .navbar .navbar-brand {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .navbar .navbar-brand .logo {
+        width: 46px;
+        height: 28px;
     }
 }
