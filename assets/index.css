@@ -186,7 +186,6 @@ footer .copyright {
         height: 80vh;
         background-size: 138%;
         background-position: 4% 40%;
-        min-height: 560px;
     }
 
     .page-header_description {
@@ -277,6 +276,7 @@ footer .copyright {
         margin-right: 40px;
     }
 }
+
 @media (min-width: 1200px) {
     .navbar .navbar-brand {
         font-size: 2rem;
