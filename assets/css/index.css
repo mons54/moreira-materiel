@@ -9,19 +9,19 @@
 
 .section {
     position: relative;
-    top: -70px;
-    padding: 70px 0 0;
-    margin: 0 0 -70px;
-}
-
-.section:last-child {
-    margin-bottom: 0;
+    top: -40px;
+    padding: 40px 0 0;
+    margin: 0;
 }
 
 .section h2.title {
     font-size: 1.6rem;
     padding-top: 40px;
     margin: 0;
+}
+
+.section h2.title:first-child {
+    padding-top: 40px;
 }
 
 .info {
@@ -156,6 +156,7 @@ footer .copyright {
 }
 
 .product-box {
+    position: relative;
     width: 400px;
     margin: 0 auto;
 }
@@ -165,14 +166,21 @@ footer .copyright {
     margin-bottom: 15px;
 }
 
-.product-box .product-image,
-.product-box .product-thumb {
-    display: none;
+.product-box .product-logo {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    z-index: 9;
 }
 
-.product-box .product-image:first-child,
-.product-box .product-thumb:first-child {
-    display: initial;
+.product-box .product-logo img {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.product-box .product-logo--creaton img {
+    width: 250px;
 }
 
 .product-box img {
@@ -207,18 +215,59 @@ footer .copyright {
     margin: -4px 0 0 -5px;
 }
 
+.product-box--left .product-thumbs--creaton {
+    margin-right: -5px;
+    margin-left: 0;
+}
+
 .product-box .product-thumbnails {
     position: relative;
     max-width: 68%;
     margin-left: 5px;
 }
 
+.product-box--left .product-thumbnails {
+    margin-right: 5px;
+    margin-left: 0;
+}
+
 .product-box .product-thumbnail  {
     position: relative;
-    display: inline-block;
+    cursor: pointer;
     width: 25%;
-    max-width: 25%;
     padding: 0 0 5px 5px;
+}
+
+.product-box--left .product-thumbnail {
+    padding-right: 5px;
+    padding-left: 0;
+}
+
+.product-box.clicked .product-image:first-child,
+.product-box.clicked .product-thumb:first-child,
+.product-box .product-image,
+.product-box .product-thumb {
+    display: none;
+}
+
+.product-box .product-image:first-child,
+.product-box .product-thumb:first-child,
+.product-box .product-image.selected:first-child,
+.product-box .product-thumb.selected:first-child,
+.product-box .product-image.selected,
+.product-box .product-thumb.selected {
+    display: initial;
+}
+
+.product-box .product-thumbnail img,
+.product-box.clicked .product-thumbnail:first-child img {
+    opacity: 0.8;
+}
+
+.product-box .product-thumbnail:first-child img,
+.product-box .product-thumbnail.selected:first-child img,
+.product-box .product-thumbnail.selected img {
+    opacity: initial;
 }
 
 /** iphone4 **/
