@@ -40,7 +40,7 @@
 
 .navbar .navbar-brand .logo {
     display: inline-block;
-    background-image: url(./img/logo.svg);
+    background-image: url(../img/logo.svg);
     width: 34px;
     height: 20px;
     margin-right: 0.4rem;
@@ -58,26 +58,26 @@
 }
 
 .nav-icon--tile {
-    background-image: url('./img/nav/tile.png'); 
+    background-image: url('../img/nav/tile.png'); 
 }
 
 .nav-icon--wood {
-    background-image: url('./img/nav/wood.png'); 
+    background-image: url('../img/nav/wood.png'); 
 }
 
 .nav-icon--insulation {
-    background-image: url('./img/nav/insulation.png'); 
+    background-image: url('../img/nav/insulation.png'); 
 }
 
 .nav-icon--zinguerie {
-    background-image: url('./img/nav/zinguerie.png'); 
+    background-image: url('../img/nav/zinguerie.png'); 
 }
 
 .page-header {
     max-height: 800px;
     height: 680px;
     min-height: 680px;
-    background-image: url('./img/bg.jpg');
+    background-image: url('../img/bg.jpg');
     background-color: #607D8B;
 }
 
@@ -135,6 +135,10 @@
     font-weight: 800;
 }
 
+.page-promo__text-ht {
+    font-size: initial;
+}
+
 .page-promo img {
     height: 400px;
 }
@@ -149,6 +153,72 @@
 
 footer .copyright {
     font-size: 1rem;
+}
+
+.product-box {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.product-box .product-images {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.product-box .product-image,
+.product-box .product-thumb {
+    display: none;
+}
+
+.product-box .product-image:first-child,
+.product-box .product-thumb:first-child {
+    display: initial;
+}
+
+.product-box img {
+    width: 100%;
+}
+
+.product-box .product-label {
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 28px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.product-box .product-row  {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-box .product-thumbs {
+    position: relative;
+    max-width: 32%;
+}
+
+.product-box .product-thumbs--creaton {
+    margin: -4px 0 0 -5px;
+}
+
+.product-box .product-thumbnails {
+    position: relative;
+    max-width: 68%;
+    margin-left: 5px;
+}
+
+.product-box .product-thumbnail  {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    max-width: 25%;
+    padding: 0 0 5px 5px;
 }
 
 /** iphone4 **/
@@ -248,7 +318,7 @@ footer .copyright {
 
     .navbar .navbar-brand .logo {
         display: inline-block;
-        background-image: url(./img/logo.svg);
+        background-image: url(../img/logo.svg);
         width: 40px;
         height: 24px;
         margin-right: 0.8rem;
