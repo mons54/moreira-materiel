@@ -62,9 +62,9 @@ $(document).ready(function() {
 
     var formContact = $('[data-contact-form]');
 
-    formContact.find('[name="name"]').on('change', checkFormContactName);
-    formContact.find('[name="email"]').on('change', checkFormContactEmail);
-    formContact.find('[name="message"]').on('change', checkFormContactMessage);
+    formContact.find('[name="name"]').on('blur', checkFormContactName);
+    formContact.find('[name="email"]').on('blur', checkFormContactEmail);
+    formContact.find('[name="message"]').on('blur', checkFormContactMessage);
 
     $('[data-contact-form]').on('submit', function (e) {
 
