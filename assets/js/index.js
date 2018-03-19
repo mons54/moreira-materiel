@@ -1,6 +1,29 @@
 'use strict';
 
 $(document).ready(function() {
+
+
+    $('[data-contact-form]').on('submit', function (e) {
+        
+        var email = $(this).find(''),
+            reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        
+        if (!reg.test(String(email).toLowerCase())) {
+            e.preventDefault();
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(data) {
+            },
+            error: function() {
+            }
+        });
+
+        e.preventDefault();
+    });
     
     $.fn.productBox = function() {
 

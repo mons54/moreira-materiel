@@ -39,7 +39,9 @@ a:active:hover {
 
 .btn.btn-primary:hover,
 .btn.btn-primary:active,
-.btn.btn-primary:active:hover {
+.btn.btn-primary:focus,
+.btn.btn-primary:active:hover,
+.btn.btn-primary:not(:disabled):not(.disabled):active {
     background-color: #C62828;
     border-color: #C62828;
 }
