@@ -1,15 +1,79 @@
 'use strict';
 
+function checkFormContactName() {
+
+    var input = $('[data-contact-form]').find('[name="name"]'),
+        isValid = String(input.val()).length > 2;
+
+    if (!isValid) {
+        if (!input.is(':focus')) {
+            input.closest('.form-group').addClass('has-danger');
+        }
+    } else {
+        input.closest('.form-group').removeClass('has-danger');
+    }
+
+    return isValid;
+}
+
+function checkFormContactEmail() {
+
+    var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    var input = $('[data-contact-form]').find('[name="email"]'),
+        isValid = reg.test(String(input.val()).toLowerCase());
+
+    if (!isValid) {
+        if (!input.is(':focus')) {
+            input.closest('.form-group').addClass('has-danger');
+        }
+    } else {
+        input.closest('.form-group').removeClass('has-danger');
+    }
+
+    return isValid;
+}
+
+function checkFormContactMessage() {
+
+    var input = $('[data-contact-form]').find('[name="message"]'),
+        isValid = String(input.val()).length > 9;
+
+    if (!isValid) {
+        if (!input.is(':focus')) {
+            input.closest('.form-group').addClass('has-danger');
+        }
+    } else {
+        input.closest('.form-group').removeClass('has-danger');
+    }
+
+    return isValid;
+}
+
+function getTimeFormContact() {
+    $.get('./time.php', function (response) {
+        $('[data-contact-form]').find('[name="time"]').val(response);
+    });
+}
+
 $(document).ready(function() {
 
+    getTimeFormContact();
+
+    var formContact = $('[data-contact-form]');
+
+    formContact.find('[name="name"]').on('change', checkFormContactName);
+    formContact.find('[name="email"]').on('change', checkFormContactEmail);
+    formContact.find('[name="message"]').on('change', checkFormContactMessage);
 
     $('[data-contact-form]').on('submit', function (e) {
-        
-        var email = $(this).find(''),
-            reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        
-        if (!reg.test(String(email).toLowerCase())) {
-            e.preventDefault();
+
+        e.preventDefault();
+
+        if (!checkFormContactName() || 
+            !checkFormContactEmail() || 
+            !checkFormContactMessage()) {
+            return false;
         }
 
         $.ajax({
@@ -17,8 +81,10 @@ $(document).ready(function() {
             url: $(this).attr('action'),
             data: $(this).serialize(),
             success: function(data) {
+
             },
             error: function() {
+
             }
         });
 

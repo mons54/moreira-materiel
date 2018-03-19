@@ -476,29 +476,44 @@
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
                         <h2 class="text-center title">Contactez-nous</h2>
-                        <form class="contact-form" 
-                              action="https://script.google.com/macros/s/AKfycbzgOeH9E6i6Dr5ZZprQt0I9lmulh04AzwV9VeqvMjuZyrMKs5nk/exec"
-                              method="post"
-                              data-contact-form>
+                        <form class="contact-form" action="./mail.php" method="post" data-contact-form novalidate>
+                            <input type="hidden" name="time">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <label class="bmd-label-floating">Votre Nom</label>
-                                        <input name="name" type="text" maxlength="30" class="form-control">
+                                        <label for="contactName" class="bmd-label-floating">Nom*</label>
+                                        <input id="contactName" name="name" type="text" maxlength="30" class="form-control" required>
+                                        <div class="form-control-feedback">Minimum 3 caractères</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <label class="bmd-label-floating">Votre Email</label>
-                                        <input name="email" type="email" class="form-control">
+                                        <label for="contactEmail" class="bmd-label-floating">Email*</label>
+                                        <input id="contactEmail" name="email" type="email" class="form-control" required>
+                                        <div class="form-control-feedback">Email invalide</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group bmd-form-group">
+                                        <label for="contactPhone" class="bmd-label-floating">Téléphone</label>
+                                        <input id="contactPhone" name="phone" type="tel" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group bmd-form-group">
+                                        <label for="contactAddress" class="bmd-label-floating">Adresse</label>
+                                        <input id="contactAddress" name="address" type="text" class="form-control">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
-                                        <label for="exampleMessage" class="bmd-label-floating">Votre Message</label>
-                                        <textarea name="message" class="form-control" rows="4"></textarea>
+                                        <label for="contactMessage" class="bmd-label-floating">Message*</label>
+                                        <textarea id="contactMessage" name="message" class="form-control" rows="4" required></textarea>
+                                        <div class="form-control-feedback">Minimum 10 caractères</div>
                                     </div>
                                 </div>
                             </div>
@@ -527,14 +542,14 @@
         </div>
     </footer>
 
-    <script defer src="./assets/js/core/jquery.min.js"></script>
-    <script defer src="./assets/js/core/popper.min.js"></script>
-    <script defer src="./assets/js/bootstrap-material-design.min.js"></script>
-    <script defer src="./assets/js/plugins/moment.min.js"></script>
-    <script defer src="./assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-    <script defer src="./assets/js/plugins/nouislider.min.js"></script>
-    <script defer src="./assets/js/material-kit.js"></script>
-    <script defer src="./assets/js/index.js"></script>
+    <script src="./assets/js/core/jquery.min.js"></script>
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/bootstrap-material-design.min.js"></script>
+    <script src="./assets/js/plugins/moment.min.js"></script>
+    <script src="./assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <script src="./assets/js/plugins/nouislider.min.js"></script>
+    <script src="./assets/js/material-kit.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

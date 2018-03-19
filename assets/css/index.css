@@ -59,6 +59,22 @@ a:active:hover {
     background-image: linear-gradient(to top, #239e48 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
+.form-control-feedback {
+    font-size: 0.9rem;
+    color: #be212b;
+    display: none;
+}
+
+.has-success .form-control-feedback {
+    color: #239d48;
+    display: initial;
+}
+
+.has-danger .form-control-feedback {
+    color: #be212b;
+    display: initial;
+}
+
 .border-raduis--20 {
     border-radius: 20px;
 }

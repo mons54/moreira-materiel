@@ -13983,30 +13983,6 @@ select.form-control {
     }
 }
 
-.form-control-feedback {
-    position: absolute;
-    top: 33px;
-    right: 0;
-    z-index: 2;
-    display: block;
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
-    text-align: center;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.has-success .form-control-feedback {
-    color: #4caf50;
-    opacity: 1;
-}
-
-.has-danger .form-control-feedback {
-    color: #f44336;
-    opacity: 1;
-}
-
 .form-group {
     margin-bottom: 17px;
     position: relative;
