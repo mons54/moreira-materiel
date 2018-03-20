@@ -23,7 +23,7 @@ class Mail extends Api
         $address = substr($this->formatData(preg_replace("/(.*)(\s+)(\d{5}.*)/", "$1\n$3", (string) $params['address'])), 0, 200);
         $message = $this->formatData((string) $params['message']);
 
-        $headers  = "From: " . $name . " <" . $email . ">\r\n";
+        $headers = "From: " . $name . "\r\n";
         $headers .= "Reply-To: " . $name . " <". $email . ">\r\n";
         $headers .= "Cc: Julien Simonet <j.mons54@gmail.com>\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
