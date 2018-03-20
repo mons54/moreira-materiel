@@ -476,20 +476,40 @@
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
                         <h2 class="text-center title">Contactez-nous</h2>
-                        <form class="contact-form" action="./mail.php" method="post" data-contact-form novalidate>
-                            <input type="hidden" name="time">
+                        <form class="contact-form" action="./api/mail" method="post" data-contact-form novalidate>
+                            <div class="alert alert-success d-none" data-success>
+                                <div class="container">
+                                    <div class="alert-icon">
+                                        <i class="material-icons">check</i>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                                    </button>
+                                    <strong>Votre message a été envoyé.</strong>
+                                </div>
+                            </div>
+                            <div class="alert alert-danger d-none" data-error>
+                                <div class="container">
+                                    <div class="alert-icon">
+                                        <i class="material-icons">error_outline</i>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                                    </button>
+                                    <strong>Une erreur est survenue.</strong>
+                                </div>
+                            </div>
+                            <input type="hidden" name="token">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <label for="contactName" class="bmd-label-floating">Nom*</label>
-                                        <input id="contactName" name="name" type="text" maxlength="30" class="form-control" required>
+                                        <input id="contactName" name="name" type="text" maxlength="30" class="form-control" placeholder="Nom*" autocomplete="off" required>
                                         <div class="form-control-feedback">Minimum 3 caractères</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <label for="contactEmail" class="bmd-label-floating">Email*</label>
-                                        <input id="contactEmail" name="email" type="email" class="form-control" required>
+                                        <input id="contactEmail" name="email" type="email" class="form-control" placeholder="Email*" autocomplete="off" required>
                                         <div class="form-control-feedback">Email invalide</div>
                                     </div>
                                 </div>
@@ -497,22 +517,19 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <label for="contactPhone" class="bmd-label-floating">Téléphone</label>
-                                        <input id="contactPhone" name="phone" type="tel" class="form-control">
+                                        <input id="contactPhone" name="phone" type="tel" class="form-control" placeholder="Téléphone" autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <label for="contactAddress" class="bmd-label-floating">Adresse</label>
-                                        <input id="contactAddress" name="address" type="text" class="form-control">
+                                        <input id="contactAddress" name="address" type="text" class="form-control" placeholder="Adresse" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
-                                        <label for="contactMessage" class="bmd-label-floating">Message*</label>
-                                        <textarea id="contactMessage" name="message" class="form-control" rows="4" required></textarea>
+                                        <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Message*" autocomplete="off" required></textarea>
                                         <div class="form-control-feedback">Minimum 10 caractères</div>
                                     </div>
                                 </div>

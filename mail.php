@@ -90,7 +90,7 @@ ob_start();
     <div class="container">
         <div class="content">
             <h1 class="title">
-                <img class="logo" src="http://moreiramateriel.fr/assets/img/logo.png">
+                <img class="logo" src="/assets/img/logo.png" width="32px" style="width: 32px">
                 <strong>Moreira</strong> Materiel
             </h1>
             <div class="contact">

@@ -1,95 +1,116 @@
 'use strict';
 
-function checkFormContactName() {
-
-    var input = $('[data-contact-form]').find('[name="name"]'),
-        isValid = String(input.val()).length > 2;
-
-    if (!isValid) {
-        if (!input.is(':focus')) {
-            input.closest('.form-group').addClass('has-danger');
-        }
-    } else {
-        input.closest('.form-group').removeClass('has-danger');
-    }
-
-    return isValid;
-}
-
-function checkFormContactEmail() {
-
-    var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    var input = $('[data-contact-form]').find('[name="email"]'),
-        isValid = reg.test(String(input.val()).toLowerCase());
-
-    if (!isValid) {
-        if (!input.is(':focus')) {
-            input.closest('.form-group').addClass('has-danger');
-        }
-    } else {
-        input.closest('.form-group').removeClass('has-danger');
-    }
-
-    return isValid;
-}
-
-function checkFormContactMessage() {
-
-    var input = $('[data-contact-form]').find('[name="message"]'),
-        isValid = String(input.val()).length > 9;
-
-    if (!isValid) {
-        if (!input.is(':focus')) {
-            input.closest('.form-group').addClass('has-danger');
-        }
-    } else {
-        input.closest('.form-group').removeClass('has-danger');
-    }
-
-    return isValid;
-}
-
-function getTimeFormContact() {
-    $.get('./time.php', function (response) {
-        $('[data-contact-form]').find('[name="time"]').val(response);
-    });
-}
-
 $(document).ready(function() {
 
-    getTimeFormContact();
+    $.fn.contact = function() {
 
-    var formContact = $('[data-contact-form]');
+        var element = $(this);
 
-    formContact.find('[name="name"]').on('blur', checkFormContactName);
-    formContact.find('[name="email"]').on('blur', checkFormContactEmail);
-    formContact.find('[name="message"]').on('blur', checkFormContactMessage);
+        this.checkName = function () {
 
-    $('[data-contact-form]').on('submit', function (e) {
+            var input = element.find('[name="name"]'),
+                isValid = String(input.val()).length > 2;
 
-        e.preventDefault();
-
-        if (!checkFormContactName() || 
-            !checkFormContactEmail() || 
-            !checkFormContactMessage()) {
-            return false;
-        }
-
-        $.ajax({
-            type: 'POST',
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
-            success: function(data) {
-
-            },
-            error: function() {
-
+            if (!isValid) {
+                if (!input.is(':focus')) {
+                    input.closest('.form-group').addClass('has-danger');
+                }
+            } else {
+                input.closest('.form-group').removeClass('has-danger');
             }
-        });
 
-        e.preventDefault();
-    });
+            return isValid;
+        };
+
+        this.checkEmail = function () {
+
+            var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                input = element.find('[name="email"]'),
+                isValid = reg.test(String(input.val()).toLowerCase());
+
+            if (!isValid) {
+                input.closest('.form-group').addClass('has-danger');
+            } else {
+                input.closest('.form-group').removeClass('has-danger');
+            }
+
+            return isValid;
+        };
+
+        this.checkMessage = function () {
+
+            var input = element.find('[name="message"]'),
+                isValid = String(input.val()).length > 9;
+
+            if (!isValid) {
+                if (!input.is(':focus')) {
+                    input.closest('.form-group').addClass('has-danger');
+                }
+            } else {
+                input.closest('.form-group').removeClass('has-danger');
+            }
+
+            return isValid;
+        };
+
+        this.generateToken = function () {
+            setTimeout(function () {
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: './api/mail/token',
+                    success: function(data) {
+                        element.find('[name="token"]').val(data);
+                    }
+                });
+            }.bind(this), 3000);
+        };
+
+        this.generateToken();
+
+        element.find('[name="name"]').on('blur', this.checkName);
+        element.find('[name="email"]').on('blur', this.checkEmail);
+        element.find('[name="message"]').on('blur', this.checkMessage);
+
+        element.on('submit', function (e) {
+
+            e.preventDefault();
+
+            if (!this.checkName() || 
+                !this.checkEmail() || 
+                !this.checkMessage()) {
+                return false;
+            }
+
+            element.find('[data-success]').addClass('d-none');
+            element.find('[data-error]').addClass('d-none');
+
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                success: function(data) {
+                    var alert = element.find('[data-success]');
+                    alert.removeClass('d-none');
+                    alert.find('[data-dismiss]').one('click', function (e) {
+                        e.stopImmediatePropagation();
+                        alert.addClass('d-none');
+                    });
+                    element[0].reset();
+                    this.generateToken();
+                }.bind(this),
+                error: function() {
+                    var alert = element.find('[data-error]');
+                    alert.removeClass('d-none');
+                    alert.find('[data-dismiss]').one('click', function (e) {
+                        e.stopImmediatePropagation();
+                        alert.addClass('d-none');
+                    });
+                }
+            });
+        }.bind(this));
+    };
     
     $.fn.productBox = function() {
 
@@ -116,4 +137,5 @@ $(document).ready(function() {
     };
  
     $('[data-product-box]').productBox();
+    $('[data-contact-form]').contact();
 });
