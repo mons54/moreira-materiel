@@ -23,7 +23,7 @@ class Mail extends Api
         $address = substr($this->formatData(preg_replace("/(.*)(\s+)(\d{5}.*)/", "$1\n$3", (string) $params['address'])), 0, 200);
         $message = $this->formatData((string) $params['message']);
 
-        $headers = "From: " . $name . " <" . $email . ">\r\n";
+        $headers  = "From: " . $name . "<" . crc32($email) . "@moreiramateriel.fr>\r\n";
         $headers .= "Reply-To: " . $name . " <". $email . ">\r\n";
         $headers .= "Cc: Julien Simonet <j.mons54@gmail.com>\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
@@ -37,9 +37,6 @@ class Mail extends Api
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
             <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
             <style>
-                .container {
-                    background-color: #be202a;
-                }
                 .content {
                     background-color: #fff; 
                     max-width: 600px; 
@@ -83,21 +80,19 @@ class Mail extends Api
             </style>
         </head>
         <body>
-            <div class="container">
-                <div class="content">
-                    <h1 class="title">
-                        <img class="logo" src="https://moreiramateriel.fr/assets/img/logo-mail.png">
-                        <strong>Moreira</strong> Materiel
-                    </h1>
-                    <div class="contact">
-                        <div><?= $name ?></div>
-                        <div><?= $email ?></div>
-                        <? if (!empty($phone)) { ?><div><?= $phone; ?></div><? } ?>
-                        <? if (!empty($address)) { ?><div class="address"><?= $address; ?></div><? } ?>
-                    </div>
-                    <h2 class="object">Demande de contact</h2>
-                    <p class="message"><?= $message ?></p>
+            <div class="content">
+                <h1 class="title">
+                    <img class="logo" src="https://moreiramateriel.fr/assets/img/logo-mail.png">
+                    <strong>Moreira</strong> Materiel
+                </h1>
+                <div class="contact">
+                    <div><?= $name ?></div>
+                    <div><?= $email ?></div>
+                    <? if (!empty($phone)) { ?><div><?= $phone; ?></div><? } ?>
+                    <? if (!empty($address)) { ?><div class="address"><?= $address; ?></div><? } ?>
                 </div>
+                <h2 class="object">Demande de contact</h2>
+                <p class="message"><?= $message ?></p>
             </div>
         </body>
         </html>
@@ -105,7 +100,7 @@ class Mail extends Api
 
         $message = ob_get_clean();
 
-        if (!mail('moreira.toiture@gmail.com', '[MOREIRA MATERIEL] Contact', $message, $headers)) {
+        if (!mail('j.mons54@gmail.com', '[MOREIRA MATERIEL] Contact', $message, $headers)) {
             $this->error(500);
             return $this->response("Une erreur est survenue");
         }
