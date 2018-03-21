@@ -84,6 +84,7 @@ $(document).ready(function() {
 
             element.find('[data-success]').addClass('d-none');
             element.find('[data-error]').addClass('d-none');
+            element.find('[type="submit"]').prop('disabled', true);
 
             $.ajax({
                 type: 'POST',
@@ -107,6 +108,9 @@ $(document).ready(function() {
                         e.stopImmediatePropagation();
                         alert.addClass('d-none');
                     });
+                },
+                complete: function () {
+                    element.find('[type="submit"]').prop('disabled', false);
                 }
             });
         }.bind(this));
