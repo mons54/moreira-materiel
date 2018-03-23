@@ -4572,6 +4572,7 @@ tbody.collapse.show {
 .card {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
@@ -5965,7 +5966,8 @@ button.close {
 
 .carousel-inner {
     position: relative;
-    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
     overflow: hidden;
 }
 
