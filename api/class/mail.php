@@ -100,7 +100,7 @@ class Mail extends Api
 
         $message = ob_get_clean();
 
-        if (!mail('j.mons54@gmail.com', '[MOREIRA MATERIEL] Contact', $message, $headers)) {
+        if (!mail('moreira.toiture@gmail.com', '[MOREIRA MATERIEL] Contact', $message, $headers)) {
             $this->error(500);
             return $this->response("Une erreur est survenue");
         }
