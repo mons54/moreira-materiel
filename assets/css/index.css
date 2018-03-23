@@ -28,6 +28,7 @@ a {
 
 a:hover,
 a:active,
+a:visited,
 a:active:hover {
     color: #C62828;
 }
@@ -126,7 +127,7 @@ a:active:hover {
     height: 80vh;
     max-height: 800px;
     min-height: 680px;
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/ratio-creaton.jpg');
     background-color: #607D8B;
 }
 
@@ -302,6 +303,11 @@ footer .copyright {
     margin-top: 20px;
 }
 
+.trialfex-isolant {
+    width: 100%;
+    padding-top: 20px;
+}
+
 /** iphone4 **/
 @media (max-width: 330px) {
 
@@ -393,6 +399,11 @@ footer .copyright {
 
     .wood-description p {
         margin-bottom: 40px;
+    }
+
+    .trialfex-isolant {
+        padding: 40px 40px 0;
+        transform: scale(-1, 1);
     }
 }
 
