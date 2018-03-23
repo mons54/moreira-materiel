@@ -14282,10 +14282,6 @@ textarea {
     padding: 0.625rem 0;
 }
 
-.navbar>.container {
-    flex: 1;
-}
-
 .navbar.bg-primary {
     color: #fff;
     background-color: #9c27b0 !important;

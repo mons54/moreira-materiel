@@ -249,6 +249,7 @@ footer .copyright {
 .product-box .product-thumbs {
     position: relative;
     max-width: 32%;
+    flex: 0 0 32%;
 }
 
 .product-box .product-thumbs--creaton {
@@ -258,13 +259,15 @@ footer .copyright {
 .product-box .product-thumbnails {
     position: relative;
     max-width: 68%;
+    flex: 0 0 68%;
     margin-left: 4px;
 }
 
 .product-box .product-thumbnail  {
     position: relative;
     cursor: pointer;
-    width: 25%;
+    max-width: 25%;
+    flex: 0 0 25%;
     padding: 0 0 5px 5px;
 }
 
@@ -281,7 +284,7 @@ footer .copyright {
 .product-box .product-thumb.selected:first-child,
 .product-box .product-image.selected,
 .product-box .product-thumb.selected {
-    display: initial;
+    display: block;
 }
 
 .product-box .product-thumbnail img,
