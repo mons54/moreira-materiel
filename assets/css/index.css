@@ -319,15 +319,20 @@ footer .copyright {
 
 .trialfex-shema__image {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .trialfex-shema__image img {
     width: 100%;
     max-width: 300px;
+    margin: auto;
 }
 
 .trialfex-shema__content {
     margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.8rem;
 }
 
 .trialfex-shema__title {
@@ -335,7 +340,6 @@ footer .copyright {
     padding-left: 8px;
     line-height: 20px;
     color: #f29400;
-    font-size: 16px;
     font-weight: 600;
 }
 
@@ -344,7 +348,6 @@ footer .copyright {
     margin-left: 18px;
     padding-left: 8px;
     padding-top: 4px;
-    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -437,44 +440,10 @@ footer .copyright {
     .page-promo__text {
         bottom: 60px;
     }
-    
-    .product-description {
-        margin-top: 0;
-    }
-
-    .wood-description {
-        margin-top: 0;
-    }
-
-    .wood-description p {
-        margin-bottom: 40px;
-    }
-
-    .trialfex-isolant {
-        padding: 0;
-    }
-
-    .trialfex-shema {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .trialfex-shema__image {
-        position: relative;
-        max-width: 40%;
-        flex: 0 0 40%;
-        margin: auto;
-    }
-
-    .trialfex-shema__image img {
-        margin-top: -10px;
-        padding-right: 20px;
-    }
 
     .trialfex-shema__content {
-        position: relative;
-        max-width: 60%;
-        flex: 0 0 60%;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
     }
 }
 
@@ -557,6 +526,22 @@ footer .copyright {
     .page-header_description p {
         font-size: 1.2rem;
         line-height: 2rem;
+    }
+
+    .product-description {
+        margin-top: 0;
+    }
+
+    .wood-description {
+        margin-top: 0;
+    }
+
+    .wood-description p {
+        margin-bottom: 40px;
+    }
+
+    .trialfex-isolant {
+        padding: 0;
     }
 }
 
