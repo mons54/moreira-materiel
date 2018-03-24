@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "csso": "^3.5.0",
+    "html-minifier": "^3.5.12"
+  }
+}

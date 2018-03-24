@@ -18,6 +18,10 @@ ul li, p {
     line-height: 1.8rem;
 }
 
+ul {
+    list-style: circle;
+}
+
 p {
     text-align: justify;
 }
@@ -358,6 +362,11 @@ footer .copyright {
 
 .trialfex-shema__description--hiver {
     border-color: #1dbbe9;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    cursor: pointer;
 }
 
 /** iphone4 **/
