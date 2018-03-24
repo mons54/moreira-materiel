@@ -309,6 +309,52 @@ footer .copyright {
 .trialfex-isolant {
     width: 100%;
     padding-top: 20px;
+    max-width: 495px;
+}
+
+.trialfex-classification {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.trialfex-shema__image {
+    text-align: center;
+}
+
+.trialfex-shema__image img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.trialfex-shema__content {
+    margin-top: 20px;
+}
+
+.trialfex-shema__title {
+    border-left: 20px solid #f29400;
+    padding-left: 8px;
+    line-height: 20px;
+    color: #f29400;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.trialfex-shema__description {
+    border-left: 2px solid #f29400;
+    margin-left: 18px;
+    padding-left: 8px;
+    padding-top: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.trialfex-shema__title--hiver {
+    border-color: #1dbbe9;
+    color: #1dbbe9;
+}
+
+.trialfex-shema__description--hiver {
+    border-color: #1dbbe9;
 }
 
 /** iphone4 **/
@@ -405,8 +451,30 @@ footer .copyright {
     }
 
     .trialfex-isolant {
-        padding: 40px 40px 0;
-        transform: scale(-1, 1);
+        padding: 0;
+    }
+
+    .trialfex-shema {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .trialfex-shema__image {
+        position: relative;
+        max-width: 40%;
+        flex: 0 0 40%;
+        margin: auto;
+    }
+
+    .trialfex-shema__image img {
+        margin-top: -10px;
+        padding-right: 20px;
+    }
+
+    .trialfex-shema__content {
+        position: relative;
+        max-width: 60%;
+        flex: 0 0 60%;
     }
 }
 
