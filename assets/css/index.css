@@ -131,7 +131,7 @@ a:active:hover {
     height: 80vh;
     max-height: 800px;
     min-height: 680px;
-    background-image: url('/assets/img/ratio-creaton.jpg');
+    background-image: url('/assets/img/ratio-creaton-1200.jpg');
     background-color: #607D8B;
 }
 
@@ -340,15 +340,15 @@ footer .copyright {
 }
 
 .trialfex-shema__title {
-    border-left: 20px solid #f29400;
+    border-left: 20px solid #f44336;
     padding-left: 8px;
     line-height: 20px;
-    color: #f29400;
+    color: #f44336;
     font-weight: 600;
 }
 
 .trialfex-shema__description {
-    border-left: 2px solid #f29400;
+    border-left: 2px solid #f44336;
     margin-left: 18px;
     padding-left: 8px;
     padding-top: 4px;
@@ -356,12 +356,12 @@ footer .copyright {
 }
 
 .trialfex-shema__title--hiver {
-    border-color: #1dbbe9;
-    color: #1dbbe9;
+    border-color: #2196f3;
+    color: #2196f3;
 }
 
 .trialfex-shema__description--hiver {
-    border-color: #1dbbe9;
+    border-color: #2196f3;
 }
 
 .carousel-control-prev, 
@@ -431,11 +431,6 @@ footer .copyright {
 
     .separator {
         margin-bottom: 40px;
-    }
-
-    .page-header {
-        height: 80vh;
-        background-position: center 80%;
     }
 
     .page-header_description {
@@ -568,5 +563,9 @@ footer .copyright {
     .navbar .navbar-brand .logo {
         width: 46px;
         height: 28px;
+    }
+
+    .page-header {
+        background-image: url('/assets/img/ratio-creaton.jpg');
     }
 }
