@@ -369,6 +369,25 @@ footer .copyright {
     cursor: pointer;
 }
 
+.contact-detail {
+    margin-top: 20px;
+}
+
+.contact-detail .fa {
+    width: 16px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.contact-detail a {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contact-detail {
+    margin-top: 20px;
+}
+
 /** iphone4 **/
 @media (max-width: 330px) {
 
