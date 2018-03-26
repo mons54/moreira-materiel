@@ -69,17 +69,17 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tel:+33667152160">
-                            <i class="nav-icon fa fa-phone"></i> 06 67 15 21 60
+                            <i class="material-icons">call</i> 06 67 15 21 60
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">
-                            <i class="nav-icon fa fa-envelope"></i> <span class="nav-text nav-text--mobile">Contact</span>
+                            <i class="material-icons">email</i> <span class="nav-text nav-text--mobile">Contact</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://twitter.com/moreiratoiture" target="_blank">
-                            <i class="nav-icon fa fa-twitter"></i> <span class="nav-text nav-text--mobile">Twitter</span>
+                        <a class="nav-link" href="#adresse">
+                            <i class="material-icons">place</i> <span class="nav-text nav-text--mobile">Adresse</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -539,9 +539,11 @@
             <div class="section section-contacts" id="contact">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
-                        <h2 class="text-center title">Contactez-nous</h2>
-                        <div class="contact-detail"><i class="fa fa-envelope"></i> <a href="mailto:moreira.toiture@gmail.com">moreira.toiture@gmail.com</a></div>
-                        <div class="contact-detail"><i class="fa fa-map-marker" style="font-size: 20px"></i> <a href="https://www.google.fr/maps/dir/''/moreira+mat%C3%A9riel/data=!4m5!4m4!1m0!1m2!1m1!1s0x47949996d3b62935:0xcaf9d0fa32754cd0?sa=X&ved=0ahUKEwipleugrIbaAhUQr6QKHZQfDw4Q9RcImgEwDA" target="_blank">11 route de Bosserville, 54420 SAULXURES LÈS NANCY</a></div>
+                        <h2 class="text-center title">Email</h2>
+                        <div class="contact-detail">
+                            <i class="icon material-icons">email</i> 
+                            <a href="mailto:moreira.toiture@gmail.com">moreira.toiture@gmail.com</a>
+                        </div>
                         <form class="contact-form" action="./api/mail" method="post" data-contact-form novalidate>
                             <div class="alert alert-success d-none" data-success>
                                 <div class="container">
@@ -606,6 +608,18 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-contacts" id="adresse">
+                <h2 class="text-center title">Adresse</h2>
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <div class="contact-detail">
+                            <i class="icon material-icons">place</i> 
+                            <a href="https://www.google.fr/maps/dir/''/moreira+mat%C3%A9riel/data=!4m5!4m4!1m0!1m2!1m1!1s0x47949996d3b62935:0xcaf9d0fa32754cd0?sa=X&ved=0ahUKEwipleugrIbaAhUQr6QKHZQfDw4Q9RcImgEwDA" target="_blank">11 Route de Bosserville, 54420 Saulxures-lès-Nancy</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10536.548895162758!2d6.2447369!3d48.683741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcaf9d0fa32754cd0!2sMoreira+Materiel!5e0!3m2!1sfr!2sfr!4v1522056889383" style="width: 100%; max-width: 730px; max-height: 400px;" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

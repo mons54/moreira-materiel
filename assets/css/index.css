@@ -370,22 +370,15 @@ footer .copyright {
 }
 
 .contact-detail {
-    margin-top: 20px;
-}
-
-.contact-detail .fa {
-    width: 16px;
     text-align: center;
-    margin-right: 5px;
-}
-
-.contact-detail a {
-    font-weight: 500;
+    margin-bottom: 20px;
     font-size: 16px;
 }
 
-.contact-detail {
-    margin-top: 20px;
+.contact-detail .icon {
+    position: relative;
+    top: 6px;
+    font-size: 24px;
 }
 
 /** iphone4 **/
