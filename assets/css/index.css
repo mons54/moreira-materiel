@@ -1,56 +1,46 @@
-h1 {
+h1,h2 {
     font-size: 2.2rem;
-    margin-top: 0;
+    margin-top: 0
 }
 
 h2 {
     font-size: 1.6rem;
-    padding-top: 40px;
-    margin-top: 0;
+    padding-top: 40px
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.4rem
 }
 
-ul li, p {
+p,ul li {
     font-size: 1rem;
-    line-height: 1.8rem;
+    line-height: 1.8rem
 }
 
 ul {
-    list-style: circle;
+    list-style: circle
 }
 
 p {
-    text-align: justify;
+    text-align: justify
 }
 
 a {
-    color: #be202a;
+    color: #be202a
 }
 
-a:hover,
-a:active,
-a:visited,
-a:active:hover {
-    color: #C62828;
+a:active,a:active:hover,a:hover,a:visited {
+    color: #c62828
 }
 
 .btn.btn-primary {
     background-color: #be202a;
-    border-color: #be202a;
+    border-color: #be202a
 }
 
-.btn.btn-primary:hover,
-.btn.btn-primary:active,
-.btn.btn-primary:focus,
-.btn.btn-primary:active:hover,
-.btn.btn-primary:not(:disabled):not(.disabled):active,
-.btn.btn-primary.disabled:hover, 
-.btn.btn-primary:disabled:hover {
-    background-color: #C62828;
-    border-color: #C62828;
+.btn.btn-primary.disabled:hover,.btn.btn-primary:active,.btn.btn-primary:active:hover,.btn.btn-primary:disabled:hover,.btn.btn-primary:focus,.btn.btn-primary:hover,.btn.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #c62828;
+    border-color: #c62828
 }
 
 .external-link {
@@ -59,59 +49,60 @@ a:active:hover {
     border-radius: 5px;
     text-transform: uppercase;
     margin-top: 20px;
-    display: inline-block;
+    display: inline-block
 }
 
-.form-control, .is-focused .form-control {
-    background-image: linear-gradient(to top, #239e48 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+.form-control,.is-focused .form-control {
+    background-image: linear-gradient(to top,#239e48 2px,rgba(156,39,176,0) 2px),linear-gradient(to top,#d2d2d2 1px,rgba(210,210,210,0) 1px)
 }
 
 .form-control-feedback {
-    font-size: 0.9rem;
+    font-size: .9rem;
     color: #be212b;
-    display: none;
+    display: none
 }
 
 .has-success .form-control-feedback {
     color: #239d48;
-    display: initial;
+    display: initial
 }
 
 .has-danger .form-control-feedback {
     color: #be212b;
-    display: initial;
+    display: initial
 }
 
 .border-raduis--20 {
-    border-radius: 20px;
+    border-radius: 20px
 }
 
 .section {
     position: relative;
     top: -40px;
     padding: 40px 0 0;
-    margin: 0;
+    margin: 0
 }
 
 .title {
-    text-align: center;
+    text-align: center
 }
 
 .info {
-    padding: 40px 0 0;
+    padding: 40px 0 0
 }
 
 .navbar .navbar-brand {
     margin-right: 0;
     font-size: 1.5rem;
-   text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .navbar .navbar-brand strong {
-    font-weight: 800;
+    font-weight: 800
 }
 
 .navbar .navbar-brand .logo {
+    position: relative;
     display: inline-block;
     background-image: url(/assets/img/logo.svg);
     width: 32px;
@@ -119,56 +110,51 @@ a:active:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #be202a;
-    margin-right: 0.4rem;
+    margin-right: .4rem
 }
 
-.navbar .navbar-nav .nav-item .nav-link .material-icons, 
-.navbar .navbar-nav .nav-item .nav-link .fa {
-    font-size: 1rem;
+.navbar .navbar-nav .nav-item .nav-link .fa,.navbar .navbar-nav .nav-item .nav-link .material-icons,footer .copyright {
+    font-size: 1rem
 }
 
 .page-header {
     height: 80vh;
     max-height: 800px;
     min-height: 680px;
-    background-image: url('/assets/img/ratio-creaton-1200.jpg');
-    background-color: #607D8B;
+    background-image: url(/assets/img/ratio-creaton-1200.jpg);
+    background-color: #607d8b
 }
 
 .page-header_description {
-    padding: 0.4rem 0;
+    padding: .4rem 0
 }
 
 .page-header_description a {
-    color: inherit;
+    color: inherit
 }
 
 .page-header_description p {
     font-size: 1rem;
     line-height: 1.6rem;
-    text-align: center;
+    text-align: center
 }
 
 .page-header_partner {
     margin-top: 20px;
-    border-radius: 5px;
-}
-
-.page-header_partner {
     height: 60px;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .page-header_partner--creaton {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-right: 10px;
+    background-color: rgba(255,255,255,.5);
+    margin-right: 10px
 }
 
 .page-promo {
     max-height: 160px;
     position: relative;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .page-promo__text {
@@ -180,57 +166,53 @@ a:active:hover {
     background-color: #be202a;
     border-radius: 50%;
     box-shadow: 0 0 2px #000;
-    text-align: center;
+    text-align: center
 }
 
 .page-promo img {
-    height: 400px;
+    height: 400px
 }
 
 .main-raised {
-    margin: -60px 10px 0px;
+    margin: -60px 10px 0
 }
 
 .section--tile .icon img {
-    width: 200px;
-}
-
-footer .copyright {
-    font-size: 1rem;
+    width: 200px
 }
 
 .product-box {
     position: relative;
     width: 100%;
-    text-align: center;
+    text-align: center
 }
 
 .product-box .product-images {
     position: relative;
     margin-bottom: 15px;
     max-height: 400px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .product-box .product-logo {
     position: absolute;
     width: 100%;
     top: 20px;
-    z-index: 9;
+    z-index: 9
 }
 
 .product-box .product-logo img {
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255,255,255,.5)
 }
 
 .product-box .product-logo--creaton img {
-    width: 250px;
+    width: 250px
 }
 
 .product-box img {
-    width: 100%;
+    width: 100%
 }
 
 .product-box .product-label {
@@ -242,101 +224,90 @@ footer .copyright {
     padding: 20px 0;
     font-size: 18px;
     color: #fafafa;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,.5)
 }
 
-.product-box .product-row  {
+.product-box .product-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .product-box .product-thumbs {
     position: relative;
     max-width: 32%;
-    flex: 0 0 32%;
+    flex: 0 0 32%
 }
 
 .product-box .product-thumbs--creaton {
-    margin: -4px 0 0 -4px;
+    margin: -4px 0 0 -4px
 }
 
 .product-box .product-thumbnails {
     position: relative;
     max-width: 68%;
     flex: 0 0 68%;
-    margin-left: 4px;
+    margin-left: 4px
 }
 
-.product-box .product-thumbnail  {
+.product-box .product-thumbnail {
     position: relative;
     cursor: pointer;
     max-width: 25%;
     flex: 0 0 25%;
-    padding: 0 0 5px 5px;
+    padding: 0 0 5px 5px
 }
 
-.product-box.clicked .product-image:first-child,
-.product-box.clicked .product-thumb:first-child,
-.product-box .product-image,
-.product-box .product-thumb {
-    display: none;
+.product-box .product-image,.product-box .product-thumb,.product-box.clicked .product-image:first-child,.product-box.clicked .product-thumb:first-child {
+    display: none
 }
 
-.product-box .product-image:first-child,
-.product-box .product-thumb:first-child,
-.product-box .product-image.selected:first-child,
-.product-box .product-thumb.selected:first-child,
-.product-box .product-image.selected,
-.product-box .product-thumb.selected {
-    display: block;
+.product-box .product-image.selected,.product-box .product-image.selected:first-child,.product-box .product-image:first-child,.product-box .product-thumb.selected,.product-box .product-thumb.selected:first-child,.product-box .product-thumb:first-child {
+    display: block
 }
 
-.product-box .product-thumbnail img,
-.product-box.clicked .product-thumbnail:first-child img {
-    opacity: initial;
+.product-box .product-thumbnail img,.product-box.clicked .product-thumbnail:first-child img {
+    opacity: initial
 }
 
-.product-box .product-thumbnail:first-child img,
-.product-box .product-thumbnail.selected:first-child img,
-.product-box .product-thumbnail.selected img {
-    opacity: 0.8;
+.product-box .product-thumbnail.selected img,.product-box .product-thumbnail.selected:first-child img,.product-box .product-thumbnail:first-child img {
+    opacity: .8
 }
 
-.product-description  {
-    margin-top: 10px;
+.product-description {
+    margin-top: 10px
 }
 
 .wood-description {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .trialfex-isolant {
     width: 100%;
     padding-top: 20px;
-    max-width: 495px;
+    max-width: 495px
 }
 
 .trialfex-classification {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0
 }
 
 .trialfex-shema__image {
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .trialfex-shema__image img {
     width: 100%;
     max-width: 300px;
-    margin: auto;
+    margin: auto
 }
 
 .trialfex-shema__content {
     margin-top: 20px;
     font-size: 1rem;
-    line-height: 1.8rem;
+    line-height: 1.8rem
 }
 
 .trialfex-shema__title {
@@ -344,7 +315,7 @@ footer .copyright {
     padding-left: 8px;
     line-height: 20px;
     color: #f44336;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .trialfex-shema__description {
@@ -352,231 +323,217 @@ footer .copyright {
     margin-left: 18px;
     padding-left: 8px;
     padding-top: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .trialfex-shema__title--hiver {
     border-color: #2196f3;
-    color: #2196f3;
+    color: #2196f3
 }
 
 .trialfex-shema__description--hiver {
-    border-color: #2196f3;
+    border-color: #2196f3
 }
 
-.carousel-control-prev, 
-.carousel-control-next {
-    cursor: pointer;
+.carousel-control-next,.carousel-control-prev {
+    cursor: pointer
 }
 
 .contact-detail {
     text-align: center;
-    font-size: 16px;
+    font-size: 16px
 }
 
 .contact-detail .icon {
     position: relative;
     top: 6px;
-    font-size: 24px;
+    font-size: 24px
 }
 
-/** iphone4 **/
 @media (max-width: 330px) {
-
     .navbar .navbar-brand {
-        font-size: 1.4rem;
+        font-size:1.4rem
     }
 }
 
 @media (max-width: 360px) {
-
     h1 {
-        font-size: 2.2rem;
+        font-size:2.2rem
     }
 }
 
 @media (max-width: 767px) {
-
     .hidden-sm-down {
-        display: none;
+        display:none
     }
 }
 
 @media (max-width: 991px) {
-
     .hidden-md-down {
-        display: none;
+        display:none
     }
 }
 
 @media (min-width: 576px) {
-
     .main-raised {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left:30px;
+        margin-right: 30px
     }
 
     .page-header_partners {
-        margin-top: 40px;
+        margin-top: 40px
     }
 }
 
 @media (min-width: 768px) {
-
-    ul li, p {
-       font-size: 1.2rem;
-       line-height: 1.8rem; 
+    p,ul li {
+        font-size:1.2rem;
+        line-height: 1.8rem
     }
 
-    h2 { 
-        font-size: 2.2rem;
+    h2 {
+        font-size: 2.2rem
     }
 
     .hidden-md-up {
-        display: none;
+        display: none
     }
 
     .title {
-        text-align: left;
+        text-align: left
     }
 
     .separator {
-        margin-bottom: 40px;
+        margin-bottom: 40px
     }
 
     .page-header_description {
-        padding: 1.4rem 0 1rem;
+        padding: 1.4rem 0 1rem
     }
 
     .page-header_partner {
-        height: 80px;
+        height: 80px
     }
 
     .page-promo__text {
-        bottom: 60px;
+        bottom: 60px
     }
 
     .trialfex-shema__content {
         font-size: 1.2rem;
-        line-height: 1.8rem;
+        line-height: 1.8rem
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-
+@media (min-width: 768px) and (max-width:991px) {
     h1 {
-         font-size: 3rem;
+        font-size:3rem
     }
 
     .page-header {
-        max-height: 600px;
+        max-height: 600px
     }
 
     .page-header_description p {
-        font-size: 1.1rem;
+        font-size: 1.1rem
     }
 
     .page-promo img {
         height: 360px;
         margin-right: 0;
-        margin-top: 20px;
+        margin-top: 20px
     }
 
     .page-promo__text {
         right: auto;
-        left: 0;
+        left: 0
     }
 }
 
 @media (min-width: 992px) {
-
     h1 {
-        font-size: 3.2rem;
+        font-size:3.2rem
     }
 
     .product-description .title {
         line-height: 1;
         margin-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 20px
     }
 
-    .hidden-lg-up {
-        display: none;
+    .hidden-lg-up,.nav-icon--mobile,.nav-text--mobile {
+        display: none
     }
 
     .navbar .navbar-brand {
         display: flex;
         vertical-align: middle;
-        font-size: 1.4rem;
-        margin-right: 0.4rem;
+        font-size: 1.2rem;
+        margin: 0 .5rem;
     }
 
     .navbar .navbar-brand strong {
-        margin-right: 0.4rem;
+        margin-right: .4rem
     }
 
     .navbar .navbar-nav .nav-item .nav-link {
-        padding: 0.6rem;
-        font-size: 0.85rem;
+        padding: .5rem;
+        font-size: .85rem
+    }
+
+    .navbar .navbar-nav .nav-item:last-child .nav-link {
+        padding-right: 0;
     }
 
     .navbar .navbar-brand .logo {
-        display: inline-block;
-        background-image: url(/assets/img/logo.svg);
-        width: 40px;
-        height: 24px;
-        margin-right: 0.8rem;
+        top: 4px;
+        width: 32px;
+        height: 20px;
+        margin-right: .6rem;
     }
 
-    .nav-icon--mobile,
-    .nav-text--mobile {
-        display: none;
-    }
-
-    .navbar .navbar-nav .nav-item .nav-link .material-icons, 
-    .navbar .navbar-nav .nav-item .nav-link .fa {
-        font-size: 1.2rem;
+    .navbar .navbar-nav .nav-item .nav-link .fa,.navbar .navbar-nav .nav-item .nav-link .material-icons {
+        font-size: 1.2rem
     }
 
     .page-header_description p {
         font-size: 1.2rem;
-        line-height: 2rem;
+        line-height: 2rem
     }
 
-    .product-description {
-        margin-top: 0;
-    }
-
-    .wood-description {
-        margin-top: 0;
+    .product-description,.wood-description {
+        margin-top: 0
     }
 
     .wood-description p {
-        margin-bottom: 40px;
+        margin-bottom: 40px
     }
 
     .trialfex-isolant {
-        padding: 0;
+        padding: 0
     }
 }
 
 @media (min-width: 1200px) {
     .navbar .navbar-brand {
-        font-size: 2rem;
-        margin-right: 1rem;
+        font-size: 1.6rem;
+        margin-right: 0.8rem;
+        margin-left: 0;
     }
 
     .navbar .navbar-nav .nav-item .nav-link {
-        padding: 0.8rem;
-        font-size: 0.9rem;
+        padding: .7rem;
+        font-size: .9rem;
     }
 
     .navbar .navbar-brand .logo {
-        width: 46px;
-        height: 28px;
+        top: 3px;
+        width: 40px;
+        height: 24px;
+        margin-right: .8rem;
     }
 
     .page-header {
-        background-image: url('/assets/img/ratio-creaton.jpg');
+        background-image: url(/assets/img/ratio-creaton.jpg)
     }
 }

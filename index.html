@@ -5,7 +5,7 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>Tuile, Couverture, Charpente - Vente de matériaux à Nancy - Moreira Materiel</title>
@@ -58,6 +58,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#accessoires">
+                            Accessoires
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#bois">
                             Bois
                         </a>
@@ -65,6 +70,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#isolation">
                             Isolation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            Services
                         </a>
                     </li>
                     <li class="nav-item">
@@ -451,6 +461,22 @@
                 </div>
             </div>
 
+            <div class="section section--tile" id="accessoires">
+                <div class="row">
+                    <div class="col-md-10 mr-auto ml-auto">
+                        <h2 class="title text-center">Accessoires</h2>
+                        <p>
+                            Une toiture de qualité ne dépend pas que des matériaux de charpente et de couverture, il faut aussi choisir des outils et des <strong>accessoires adaptés et de qualités</strong>. C'est pourquoi nous vous proposons une <strong>large gamme</strong> de produits assurant fiabilité, sécurité et productivité: <strong>écran sous-toiture</strong>, <strong>closoir souple</strong>, <strong>vis charpente</strong>, <strong>pointe</strong>, <strong>cloueur</strong>, <strong>tas de vis</strong>, <strong>chevilles</strong>, <strong>silicone</strong>, <strong>patte à ressort</strong>, <strong>gant</strong>, <strong>vis à faîtage</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row separator">
+                <div class="col-md-8 mr-auto ml-auto text-center">
+                    <img style="max-width: 600px" class="w-100" src="./assets/img/roof-accessories.jpg" alt="Illustration d'une toiture">
+                </div>
+            </div>
+
             <div class="section section--tile" id="bois">
                 <div class="row separator">
                     <div class="col-md-8 mr-auto ml-auto">
@@ -536,6 +562,45 @@
                 </div>
             </div>
 
+            <div class="section text-center" id="services">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2 class="title text-center">Services</h2>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon">
+                                    <i class="material-icons" style="color: #be212b;">local_shipping</i>
+                                </div>
+                                <h3 class="info-title">Livraison</h3>
+                                <p class="text-center">Faites vous livrer et garder votre énergie pour les travaux !</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon">
+                                    <i class="material-icons" style="color: #636363;">power</i>
+                                </div>
+                                <h3 class="info-title">Machine</h3>
+                                <p class="text-center">Nous vous mettons à disposition une machine pour la préparation de vos zingueries.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon">
+                                    <i class="material-icons" style="color: #6f4e37;">free_breakfast</i>
+                                </div>
+                                <h3 class="info-title">Café</h3>
+                                <p class="text-center">Et bien sûr, nous vous offrons un bon café !</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="section" id="email">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
@@ -571,13 +636,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <input id="contactName" name="name" type="text" maxlength="30" class="form-control" placeholder="Nom*" autocomplete="off" required>
+                                        <label for="contactName" class="bmd-label-floating">Nom*</label>
+                                        <input id="contactName" name="name" type="text" maxlength="30" class="form-control" required>
                                         <div class="form-control-feedback">Minimum 3 caractères</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <input id="contactEmail" name="email" type="email" class="form-control" placeholder="Email*" autocomplete="off" required>
+                                        <label for="contactEmail" class="bmd-label-floating">Email*</label>
+                                        <input id="contactEmail" name="email" type="email" class="form-control" autocomplete="off" required>
                                         <div class="form-control-feedback">Email invalide</div>
                                     </div>
                                 </div>
@@ -585,19 +652,22 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <input id="contactPhone" name="phone" type="tel" class="form-control" placeholder="Téléphone" autocomplete="off">
+                                        <label for="contactPhone" class="bmd-label-floating">Téléphone</label>
+                                        <input id="contactPhone" name="phone" type="tel" class="form-control" autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
-                                        <input id="contactAddress" name="address" type="text" class="form-control" placeholder="Adresse" autocomplete="off">
+                                        <label for="contactAddress" class="bmd-label-floating">Adresse</label>
+                                        <input id="contactAddress" name="address" type="text" class="form-control" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
-                                        <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Message*" autocomplete="off" required></textarea>
+                                        <label for="contactMessage" class="bmd-label-floating">Message*</label>
+                                        <textarea id="contactMessage" name="message" class="form-control" rows="4" autocomplete="off" required></textarea>
                                         <div class="form-control-feedback">Minimum 10 caractères</div>
                                     </div>
                                 </div>
@@ -611,15 +681,16 @@
                     </div>
                 </div>
             </div>
+
             <div class="section section-contacts" id="adresse">
                 <h2 class="text-center title">Adresse</h2>
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
                         <div class="contact-detail">
                             <i class="icon material-icons">place</i> 
-                            <a href="https://www.google.fr/maps/dir/''/moreira+mat%C3%A9riel/data=!4m5!4m4!1m0!1m2!1m1!1s0x47949996d3b62935:0xcaf9d0fa32754cd0?sa=X&ved=0ahUKEwipleugrIbaAhUQr6QKHZQfDw4Q9RcImgEwDA" target="_blank">11 Route de Bosserville, 54420 Saulxures-lès-Nancy</a>
+                            <a href="https://www.google.fr/maps/place/Moreira+Materiel/@48.683741,6.2447369,15z/data=!4m5!3m4!1s0x0:0xcaf9d0fa32754cd0!8m2!3d48.683741!4d6.2447369" target="_blank">11 Route de Bosserville, 54420 Saulxures-lès-Nancy</a>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10536.548895162758!2d6.2447369!3d48.683741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcaf9d0fa32754cd0!2sMoreira+Materiel!5e0!3m2!1sfr!2sfr!4v1522056889383" style="width: 100%; max-width: 730px; max-height: 400px; margin-top: 20px;" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe title="Adresse Google Map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10536.548895162758!2d6.2447369!3d48.683741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcaf9d0fa32754cd0!2sMoreira+Materiel!5e0!3m2!1sfr!2sfr!4v1522056889383" style="width: 100%; max-width: 730px; max-height: 400px; margin-top: 20px;" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

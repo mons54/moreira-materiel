@@ -14772,11 +14772,7 @@ textarea {
 
 .info .info-title {
     color: #3C4858;
-    margin: 1.75rem 0 0.875rem;
-}
-
-.info p {
-    color: #999999;
+    margin: 1rem 0 0.875rem;
 }
 
 .info-horizontal .icon {
