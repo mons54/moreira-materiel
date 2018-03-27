@@ -43,6 +43,10 @@ a:active,a:active:hover,a:hover,a:visited {
     border-color: #c62828
 }
 
+.bmd-form-group label {
+    color: #3c4858 !important;
+}
+
 .external-link {
     padding: 12px 20px;
     border: 1px solid #be202a;
@@ -314,8 +318,7 @@ a:active,a:active:hover,a:hover,a:visited {
     border-left: 20px solid #f44336;
     padding-left: 8px;
     line-height: 20px;
-    color: #f44336;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .trialfex-shema__description {
@@ -328,7 +331,6 @@ a:active,a:active:hover,a:hover,a:visited {
 
 .trialfex-shema__title--hiver {
     border-color: #2196f3;
-    color: #2196f3
 }
 
 .trialfex-shema__description--hiver {
