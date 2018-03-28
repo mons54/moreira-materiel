@@ -1,5 +1,7 @@
 'use strict';
 
+var apiUrl = 'https://api.moreiramateriel.com';
+
 $(document).ready(function() {
 
     $.fn.contact = function() {
@@ -58,7 +60,8 @@ $(document).ready(function() {
                 $.ajax({
                     type: 'GET',
                     dataType: 'json',
-                    url: './api/mail/token',
+                    url: apiUrl + '/mail/token',
+                    xhrFields: { withCredentials: true },
                     success: function(data) {
                         element.find('[name="token"]').val(data);
                     }
@@ -89,8 +92,9 @@ $(document).ready(function() {
             $.ajax({
                 type: 'POST',
                 dataType: 'json',
-                url: $(this).attr('action'),
+                url: apiUrl + '/mail/' + $(this).find('[name="token"]').val(),
                 data: $(this).serialize(),
+                xhrFields: { withCredentials: true },
                 success: function(data) {
                     var alert = element.find('[data-success]');
                     alert.removeClass('d-none');
