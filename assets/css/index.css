@@ -1,14 +1,14 @@
-h1,h2 {
+h1,h2,.h1,.h2 {
     font-size: 2.2rem;
     margin-top: 0
 }
 
-h2 {
+h2,.h2 {
     font-size: 1.6rem;
     padding-top: 40px
 }
 
-h3 {
+h3,.h3 {
     font-size: 1.4rem
 }
 
@@ -129,11 +129,16 @@ a:active,a:active:hover,a:hover,a:visited {
     font-size: 1rem
 }
 
-.page-header {
+.landing .page-header {
     height: 80vh;
-    max-height: 800px;
     min-height: 680px;
     background-image: url(/assets/img/ratio-creaton-1200.jpg);
+}
+
+.page-header {
+    height: 20vh;
+    min-height: 240px;
+    max-height: 800px;
     background-color: #607d8b
 }
 
@@ -151,8 +156,15 @@ a:active,a:active:hover,a:hover,a:visited {
     text-align: center
 }
 
-.page-header_partner {
+.page-header_partners {
+    margin-top: 10px;
+}
+
+.landing .page-header_partners {
     margin-top: 20px;
+}
+
+.page-header_partner {
     height: 60px;
     border-radius: 5px
 }
@@ -187,10 +199,6 @@ a:active,a:active:hover,a:hover,a:visited {
 
 .main-raised {
     margin: -60px 10px 0
-}
-
-.section--tile .icon img {
-    width: 200px
 }
 
 .product-box {
@@ -394,18 +402,23 @@ a:active,a:active:hover,a:hover,a:visited {
         margin-right: 30px
     }
 
-    .page-header_partners {
+    .landing .page-header_partners {
         margin-top: 40px
+    }
+
+    .page-header_partners {
+        margin-top: 10px;
     }
 }
 
 @media (min-width: 768px) {
     p,ul li {
         font-size:1.2rem;
-        line-height: 1.8rem
+        line-height: 1.8rem;
     }
 
-    h2 {
+    h2,
+    .h2 {
         font-size: 2.2rem
     }
 
@@ -421,12 +434,18 @@ a:active,a:active:hover,a:hover,a:visited {
         margin-bottom: 40px
     }
 
+
+    .page-header {
+        min-height: 300px;
+    }
+
     .page-header_description {
         padding: 1.4rem 0 1rem
     }
 
     .page-header_partner {
-        height: 80px
+        height: 80px;
+        margin-top: 0;
     }
 
     .page-promo__text {
@@ -547,7 +566,7 @@ a:active,a:active:hover,a:hover,a:visited {
         margin-right: .8rem;
     }
 
-    .page-header {
+    .landing .page-header {
         background-image: url(/assets/img/ratio-creaton.jpg)
     }
 }

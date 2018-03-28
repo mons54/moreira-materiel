@@ -56,20 +56,18 @@ $(document).ready(function() {
         };
 
         this.generateToken = function () {
-            setTimeout(function () {
-                $.ajax({
-                    type: 'GET',
-                    dataType: 'json',
-                    url: apiUrl + '/mail/token',
-                    xhrFields: { withCredentials: true },
-                    success: function(data) {
-                        element.find('[name="token"]').val(data);
-                    }
-                });
-            }.bind(this), 3000);
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: apiUrl + '/mail/token',
+                xhrFields: { withCredentials: true },
+                success: function(data) {
+                    element.find('[name="token"]').val(data);
+                }
+            });
         };
 
-        this.generateToken();
+        element.one('change', this.generateToken);
 
         element.find('[name="name"]').on('blur', this.checkName);
         element.find('[name="email"]').on('blur', this.checkEmail);

@@ -14936,7 +14936,8 @@ small,
     text-decoration: none;
 }
 
-h2.title {
+h2.title,
+.h2 {
     margin-bottom: 1rem;
 }
 

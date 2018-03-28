@@ -4,9 +4,8 @@ const htmlMinify = require('html-minifier').minify;
 const cssoMinify = require('csso').minify;
 const jsMinify = require('uglify-js').minify;
 
-
-const html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
-fs.writeFile(path.join(__dirname, 'index.html'), htmlMinify(html));
+//const html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
+//fs.writeFile(path.join(__dirname, 'index.html'), htmlMinify(html));
 
 const css = readAllFiles(path.join(__dirname, 'assets/css'), [
     'material-kit.css',
