@@ -56,15 +56,17 @@ $(document).ready(function() {
         };
 
         this.generateToken = function () {
-            $.ajax({
-                type: 'GET',
-                dataType: 'json',
-                url: apiUrl + '/mail/token',
-                xhrFields: { withCredentials: true },
-                success: function(data) {
-                    element.find('[name="token"]').val(data);
-                }
-            });
+            setTimeout(function() {
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: apiUrl + '/mail/token',
+                    xhrFields: { withCredentials: true },
+                    success: function(data) {
+                        element.find('[name="token"]').val(data);
+                    }
+                });
+            }, 3000);
         };
 
         element.one('change', this.generateToken);
