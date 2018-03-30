@@ -39,7 +39,7 @@ const optimizeImages = source => {
     });
 };
 
-optimizeImages(join(__dirname, 'assets/img/products'));
+optimizeImages(join(__dirname, 'assets/img'));
 
 const html = readFileSync(join(__dirname, 'index.html'), 'utf-8');
 writeFile(join(__dirname, 'index.html'), htmlMinify(html), function () {
