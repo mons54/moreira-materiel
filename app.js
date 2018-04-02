@@ -56,7 +56,7 @@ let css = readFiles(join(__dirname, 'assets/css'), [
     });
 
     css = purifyCss(html, css, {
-        whitelist: ['.nav-open']
+        whitelist: ['.nav-open', '#bodyClick']
     });
 
     css += readFiles(join(__dirname, 'assets/css'), [
