@@ -129,6 +129,10 @@ a:active,a:active:hover,a:hover,a:visited {
     margin-right: .4rem
 }
 
+.navbar .navbar-nav .nav-item .nav-link {
+    padding: .8rem 1.2rem;
+}
+
 .navbar .navbar-nav .nav-item .nav-link .fa,.navbar .navbar-nav .nav-item .nav-link .material-icons,footer .copyright {
     font-size: 1rem
 }
