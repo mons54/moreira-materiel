@@ -48,9 +48,10 @@ let css = readFiles(join(__dirname, 'assets/css'), [
 
 ['index.html', 'tuiles.html'].forEach(file => {
 
-    const html = htmlMinify(readFileSync(join(__dirname, file), 'utf-8'));
+    const htmlPath = join(__dirname, file);
+    const html = htmlMinify(readFileSync(htmlPath, 'utf-8'));
 
-    writeFile(html, () => {
+    writeFile(htmlPath, html, () => {
         console.log('HTML is minify');
     });
 
