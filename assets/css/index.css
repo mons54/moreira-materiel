@@ -133,7 +133,12 @@ a:active,a:active:hover,a:hover,a:visited {
     padding: .8rem 1.2rem;
 }
 
-.navbar .navbar-nav .nav-item .nav-link .fa,.navbar .navbar-nav .nav-item .nav-link .material-icons,footer .copyright {
+.navbar .navbar-nav .nav-item .nav-link .svg-icons {
+    width: 1rem
+}
+
+.navbar .navbar-nav .nav-item .nav-link .material-icons,
+footer .copyright {
     font-size: 1rem
 }
 
@@ -533,7 +538,11 @@ a:active,a:active:hover,a:hover,a:visited {
         margin-right: .6rem;
     }
 
-    .navbar .navbar-nav .nav-item .nav-link .fa,.navbar .navbar-nav .nav-item .nav-link .material-icons {
+    .navbar .navbar-nav .nav-item .nav-link .svg-icons {
+        width: 1.2rem
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link .material-icons {
         font-size: 1.2rem
     }
 
