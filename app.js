@@ -8,7 +8,6 @@ const imagemin = require('imagemin');
 const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 
-
 const readFiles = (folder, files, data = '') => { 
     files.forEach(value => {
         data += readFileSync(join(folder, value), 'utf-8'); 
@@ -20,24 +19,26 @@ const getDirectories = source =>
     readdirSync(source).map(name => 
         join(source, name)).filter(source => lstatSync(source).isDirectory());
 
+const optimizeImage = source => {
+  imagemin([join(source, '*.{jpg,png}')], source, {
+      plugins: [
+          imageminJpegtran(),
+          imageminPngquant({quality: '65-80'})
+      ]
+  }).then(files => {
+      console.log('Optimize images', files);
+  });
+};
+
 const optimizeImages = source => {
 
-    if (!source) {
-        return;
-    }
+  if (!source) {
+    return;
+  }
 
-    getDirectories(source).forEach(folder => {
-        imagemin([folder + '/*.{jpg,png}'], folder, {
-            plugins: [
-                imageminJpegtran(),
-                imageminPngquant({quality: '65-80'})
-            ]
-        }).then(files => {
-            console.log('Optimize images', folder);
-        });
+  optimizeImage(source);
 
-        optimizeImages(folder);
-    });
+  getDirectories(source).forEach(optimizeImages);
 };
 
 optimizeImages(join(__dirname, 'assets/img'));
