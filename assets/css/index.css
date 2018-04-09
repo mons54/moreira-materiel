@@ -385,6 +385,22 @@ footer .copyright {
     margin-top: 20px;
 }
 
+.partenaire {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.partenaire-img {
+    height: 160px;
+    margin-bottom: 20px;
+    box-shadow: -5px 5px 15px #9E9E9E;
+}
+
+.partenaire-name {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 @media (max-width: 330px) {
     .navbar .navbar-brand {
         font-size:1.4rem
@@ -421,6 +437,16 @@ footer .copyright {
 
     .page-header_partners {
         margin-top: 10px;
+    }
+
+    .partenaire {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 40px;
+    }
+
+    .partenaire:last-child {
+        margin-right: 0;
     }
 }
 
