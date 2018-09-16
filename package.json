@@ -2,7 +2,9 @@
   "devDependencies": {
     "csso": "^3.5.0",
     "html-minifier": "^3.5.12",
-    "imagemin-pngquant": "^5.1.0",
+    "imagemin": "^6.0.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^6.0.0",
     "purify-css": "^1.2.5",
     "uglify-js": "^3.3.16"
   }
