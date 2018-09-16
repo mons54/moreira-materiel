@@ -439,91 +439,18 @@
                 </div>
             </div>
 
-            <div class="section" id="email">
+            <div class="section section-contacts" id="contacts">
+                <h2 class="text-center title">Contacts</h2>
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
-                        <h2 class="text-center title">Email</h2>
+                        <div class="contact-detail">
+                            <i class="icon material-icons" style="margin-right: 4px">phone</i>
+                            <a href="tel:+33667152160">06 67 15 21 60</a>
+                        </div>
                         <div class="contact-detail">
                             <i class="icon material-icons" style="margin-right: 4px">email</i> 
-                            <a href="mailto:moreira.toiture@gmail.com">moreira.toiture@gmail.com</a>
+                            <a href="mailto:moreira.toiture@gmail.com" target="_blank">moreira.toiture@gmail.com</a>
                         </div>
-                        <form class="contact-form" data-contact-form novalidate>
-                            <div class="alert alert-success d-none" data-success>
-                                <div class="container">
-                                    <div class="alert-icon">
-                                        <i class="material-icons">check</i>
-                                    </div>
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true"><i class="material-icons">clear</i></span>
-                                    </button>
-                                    <strong>Votre message a été envoyé.</strong>
-                                </div>
-                            </div>
-                            <div class="alert alert-danger d-none" data-error>
-                                <div class="container">
-                                    <div class="alert-icon">
-                                        <i class="material-icons">error_outline</i>
-                                    </div>
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true"><i class="material-icons">clear</i></span>
-                                    </button>
-                                    <strong>Une erreur est survenue.</strong>
-                                </div>
-                            </div>
-                            <input type="hidden" name="token">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group bmd-form-group">
-                                        <label for="contactName" class="bmd-label-floating">Nom*</label>
-                                        <input id="contactName" name="name" type="text" maxlength="30" class="form-control" required>
-                                        <div class="form-control-feedback">Minimum 3 caractères</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group bmd-form-group">
-                                        <label for="contactEmail" class="bmd-label-floating">Email*</label>
-                                        <input id="contactEmail" name="email" type="email" class="form-control" autocomplete="off" required>
-                                        <div class="form-control-feedback">Email invalide</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group bmd-form-group">
-                                        <label for="contactPhone" class="bmd-label-floating">Téléphone</label>
-                                        <input id="contactPhone" name="phone" type="tel" class="form-control" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group bmd-form-group">
-                                        <label for="contactAddress" class="bmd-label-floating">Adresse</label>
-                                        <input id="contactAddress" name="address" type="text" class="form-control" autocomplete="off">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group bmd-form-group">
-                                        <label for="contactMessage" class="bmd-label-floating">Message*</label>
-                                        <textarea id="contactMessage" name="message" class="form-control" rows="4" autocomplete="off" required></textarea>
-                                        <div class="form-control-feedback">Minimum 10 caractères</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 ml-auto mr-auto text-center">
-                                    <button type="submit" class="btn btn-primary btn-raised">Envoyer votre Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section section-contacts" id="adresse">
-                <h2 class="text-center title">Adresse</h2>
-                <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto">
                         <div class="contact-detail">
                             <i class="icon material-icons">place</i> 
                             <a href="https://www.google.fr/maps/place/Moreira+Materiel/@48.683741,6.2447369,15z/data=!4m5!3m4!1s0x0:0xcaf9d0fa32754cd0!8m2!3d48.683741!4d6.2447369" target="_blank" rel="noopener">11 Route de Bosserville, 54420 Saulxures-lès-Nancy</a>
