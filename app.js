@@ -8,15 +8,15 @@ const imagemin = require('imagemin');
 const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 
-const readFiles = (folder, files, data = '') => { 
+const readFiles = (folder, files, data = '') => {
     files.forEach(value => {
-        data += readFileSync(join(folder, value), 'utf-8'); 
+        data += readFileSync(join(folder, value), 'utf-8');
     });
     return data;
 };
 
-const getDirectories = source => 
-    readdirSync(source).map(name => 
+const getDirectories = source =>
+    readdirSync(source).map(name =>
         join(source, name)).filter(source => lstatSync(source).isDirectory());
 
 const optimizeImage = source => {
@@ -52,7 +52,7 @@ let css = readFiles(join(__dirname, 'assets/css'), [
     const htmlPath = join(__dirname, file);
     const html = htmlMinify(readFileSync(htmlPath, 'utf-8'));
 
-    writeFile(htmlPath, html, () => {
+    writeFile(htmlPath, html, 'utf-8', () => {
         console.log('HTML is minify');
     });
 
@@ -64,7 +64,7 @@ let css = readFiles(join(__dirname, 'assets/css'), [
         'index.css',
     ]);
 
-    writeFile(join(__dirname, 'assets/' +  file.replace('.html', '') + '.min.css'), cssMinify(css).css);
+    writeFile(join(__dirname, 'assets/' +  file.replace('.html', '') + '.min.css'), cssMinify(css).css, 'utf-8', () => {});
 });
 
 const js = readFiles(join(__dirname, 'assets/js'), [
@@ -76,7 +76,6 @@ const js = readFiles(join(__dirname, 'assets/js'), [
     'index.js'
 ]);
 
-writeFile(join(__dirname, 'assets/app.min.js'), jsMinify(js).code, () => {
+writeFile(join(__dirname, 'assets/app.min.js'), jsMinify(js).code, 'utf-8', () => {
     console.log('JS is minify');
 });
-
